@@ -59,8 +59,8 @@ const App: React.FC = () => {
       <nav className="navbar">
         <div className="container nav-content">
           <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <img src={logoImg} alt="S&TS Partners LLP Logo" style={{ height: '50px', width: 'auto' }} />
-            S&TS Partners LLP
+            <img src={logoImg} alt="S&TS Partners LLC Logo" style={{ height: '50px', width: 'auto' }} />
+            S&TS Partners LLC
           </div>
           <ul className="nav-links">
             <li><a href="#home">Home</a></li>
@@ -89,7 +89,7 @@ const App: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h1>Defining Excellence in Legal Advocacy</h1>
-            <p>S&TS Partners LLP provides strategic, results-driven legal solutions with integrity and unwavering commitment to our clients in Mongolia and beyond.</p>
+            <p>S&TS Partners LLC provides strategic, results-driven legal solutions with integrity and unwavering commitment to our clients in Mongolia and beyond.</p>
             <button className="cta-button">Request Free Consultation</button>
           </motion.div>
         </div>
@@ -121,9 +121,9 @@ const App: React.FC = () => {
             {...fadeIn}
             style={{ maxWidth: '800px', margin: '0 auto 5rem auto', textAlign: 'center' }}
           >
-            <h2 style={{ marginBottom: '2rem' }}>About S&TS Partners LLP</h2>
+            <h2 style={{ marginBottom: '2rem' }}>About S&TS Partners LLC</h2>
             <p style={{ fontSize: '1.1rem', color: 'var(--text-main)', lineHeight: '1.8' }}>
-              S&TS Partners LLP is a full-service law firm with a strong focus on general corporate law and litigation. 
+              S&TS Partners LLC is a full-service law firm with a strong focus on general corporate law and litigation. 
               The firm was founded in 2019 by two Mongolian-qualified lawyers educated in prestigious institutions in 
               Mongolia and Australia with 15 years of separate experience in both consulting and advocacy.
             </p>
@@ -201,7 +201,7 @@ const App: React.FC = () => {
 
       <footer>
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} S&TS Partners LLP. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} S&TS Partners LLC. All rights reserved.</p>
         </div>
       </footer>
     </div>
