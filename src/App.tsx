@@ -90,7 +90,7 @@ const App: React.FC = () => {
           >
             <h1>Defining Excellence in Legal Advocacy</h1>
             <p>S&TS Partners LLC provides strategic, results-driven legal solutions with integrity and unwavering commitment to our clients in Mongolia and beyond.</p>
-            <button className="cta-button">Request Free Consultation</button>
+            <button className="cta-button">Request Consultation</button>
           </motion.div>
         </div>
       </section>
