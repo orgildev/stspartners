@@ -15,7 +15,6 @@ import {
 import logoImg from './assets/rounded-logo.png';
 import person1Img from './assets/Person1.jpg';
 import person2Img from './assets/Person2.jpg';
-import heroImg from './assets/hero.png';
 
 const App: React.FC = () => {
   const fadeIn = {
@@ -75,7 +74,7 @@ const App: React.FC = () => {
         id="home" 
         className="hero" 
         style={{ 
-          backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)), url(${heroImg})`,
+          backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
