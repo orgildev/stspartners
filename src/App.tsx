@@ -116,7 +116,7 @@ const App: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1>DEFINING EXCELLENCE IN LEGAL ADVISORY AND ADVOCACY SERVICES</h1>
+            <h1>Defining Excellence in Legal Advocacy</h1>
             <p>S&TS Partners LLC provides strategic, results driven legal solutions with integrity and an unwavering commitment to our Mongolian and foreign clients.</p>
             <button className="cta-button">Request Consultation</button>
           </motion.div>
