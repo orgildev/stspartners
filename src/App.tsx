@@ -12,7 +12,7 @@ import {
   MapPin
 } from 'lucide-react';
 
-import logoImg from './assets/rounded-logo.png';
+import logoImg from './assets/transparent-logo.png';
 import person1Img from './assets/Person1.jpg';
 import person2Img from './assets/Person2.jpg';
 
@@ -87,7 +87,7 @@ const App: React.FC = () => {
       <nav className="navbar">
         <div className="container nav-content">
           <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <img src={logoImg} alt="S&TS Partners LLC Logo" style={{ height: '50px', width: 'auto' }} />
+            <img src={logoImg} alt="S&TS Partners LLC Logo" style={{ height: '80px', width: 'auto' }} />
             S&TS Partners LLC
           </div>
           <ul className="nav-links">
@@ -103,7 +103,7 @@ const App: React.FC = () => {
         id="home" 
         className="hero" 
         style={{ 
-          backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000')`,
+          backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.4), rgba(10, 25, 47, 0.4)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -116,9 +116,9 @@ const App: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1>Defining Excellence in Legal Advocacy</h1>
+            <h1>Defining Excellence In Legal Advisory And Advocacy Services</h1>
             <p>S&TS Partners LLC provides strategic, results driven legal solutions with integrity and an unwavering commitment to our Mongolian and foreign clients.</p>
-            <button className="cta-button">Request Consultation</button>
+            <a href="#contact" className="cta-button" style={{ textDecoration: 'none' }}>Request Consultation</a>
           </motion.div>
         </div>
       </section>
@@ -197,16 +197,27 @@ const App: React.FC = () => {
             <motion.form 
               className="contact-form"
               {...fadeIn}
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const name = formData.get('name');
+                const phone = formData.get('phone');
+                const message = formData.get('message');
+                
+                const subject = `Consultation Request: ${name}`;
+                const body = `Full Name: ${name}\nPhone: ${phone}\n\nMessage:\n${message}`;
+                
+                window.location.href = `mailto:orgil0515@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+              }}
             >
               <div className="form-group">
-                <input type="text" placeholder="Full Name" required />
+                <input type="text" name="name" placeholder="Full Name" required />
               </div>
               <div className="form-group">
-                <input type="email" placeholder="Email Address" required />
+                <input type="tel" name="phone" placeholder="Phone Number" required />
               </div>
               <div className="form-group">
-                <textarea rows={5} placeholder="How can we help you?" required></textarea>
+                <textarea name="message" rows={5} placeholder="How can we help you?" required></textarea>
               </div>
               <button type="submit" className="cta-button" style={{ width: '100%' }}>Send Message</button>
             </motion.form>

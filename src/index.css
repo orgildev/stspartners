@@ -1,12 +1,12 @@
 :root {
   --primary: #0a192f;
   --secondary: #c5a059;
-  --accent: #172a45;
-  --text-main: #ccd6f6;
-  --text-muted: #8892b0;
+  --accent: #f1f5f9;
+  --text-main: #334155;
+  --text-muted: #64748b;
   --white: #ffffff;
-  --bg-main: #0a192f;
-  --bg-card: #112240;
+  --bg-main: #ffffff;
+  --bg-card: #f8fafc;
   --transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   --font-sans: 'Inter', -apple-system, system-ui, sans-serif;
 }
@@ -54,7 +54,7 @@ section {
 
 h1, h2, h3, h4 {
   font-weight: 700;
-  color: var(--white);
+  color: var(--primary);
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
@@ -64,13 +64,14 @@ h1, h2, h3, h4 {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 80px;
+  height: 120px;
   display: flex;
   align-items: center;
-  background: rgba(10, 25, 47, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
   transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .nav-content {
@@ -84,15 +85,25 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: 'Cinzel', serif;
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--secondary);
+  letter-spacing: 1px;
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
+}
+
+.nav-links a {
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .nav-links a:hover {
@@ -104,7 +115,7 @@ h1, h2, h3, h4 {
   height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)),
+  background: linear-gradient(rgba(10, 25, 47, 0.4), rgba(10, 25, 47, 0.4)),
               url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000') center/cover;
 }
 
@@ -114,18 +125,20 @@ h1, h2, h3, h4 {
 
 .hero h1 {
   font-size: clamp(2.5rem, 8vw, 4rem);
+  color: var(--white);
 }
 
 .hero p {
   font-size: 1.25rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2.5rem;
   max-width: 600px;
 }
 
 .cta-button {
+  display: inline-block;
   background: var(--secondary);
-  color: var(--primary);
+  color: var(--white);
   padding: 1rem 2.5rem;
   border-radius: 4px;
   font-weight: 700;
@@ -134,7 +147,8 @@ h1, h2, h3, h4 {
 }
 
 .cta-button:hover {
-  background: var(--white);
+  background: var(--primary);
+  color: var(--white);
   transform: translateY(-3px);
 }
 
@@ -149,13 +163,15 @@ h1, h2, h3, h4 {
   background: var(--bg-card);
   padding: 2.5rem;
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid var(--accent);
   transition: var(--transition);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
 }
 
 .practice-card:hover {
   border-color: var(--secondary);
   transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
 .practice-card .icon {
@@ -172,6 +188,8 @@ h1, h2, h3, h4 {
 
 .team-card {
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  border: 1px solid var(--accent);
 }
 
 .team-image {
@@ -207,10 +225,10 @@ h1, h2, h3, h4 {
 
 .form-group input, .form-group textarea {
   padding: 1rem;
-  background: var(--accent);
-  border: 1px solid transparent;
+  background: var(--bg-card);
+  border: 1px solid #cbd5e1;
   border-radius: 4px;
-  color: var(--white);
+  color: var(--text-main);
   font-family: inherit;
 }
 
