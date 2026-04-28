@@ -25,15 +25,36 @@ const App: React.FC = () => {
   };
 
   const practiceAreas = [
-    { icon: <Briefcase size={32} />, title: 'Corporate & Commercial', desc: 'Comprehensive legal support for business operations, contracts, and commercial transactions.' },
-    { icon: <Scale size={32} />, title: 'M&A', desc: 'Expert guidance on mergers, acquisitions, divestitures, and strategic partnerships.' },
-    { icon: <ShieldCheck size={32} />, title: 'Corporate Governance & Compliance', desc: 'Ensuring your business adheres to regulatory standards and maintains high governance levels.' },
-    { icon: <Landmark size={32} />, title: 'Banking and Finance', desc: 'Specialized advice on financial regulations, lending, and capital market transactions.' },
-    { icon: <MapPin size={32} />, title: 'Real Estate', desc: 'Full-service support for residential and commercial property acquisition and management.' },
-    { icon: <Users size={32} />, title: 'Employment', desc: 'Strategic advice on labor relations, workplace policies, and employment law compliance.' },
-    { icon: <Gavel size={32} />, title: 'Restructuring & Insolvency', desc: 'Practical solutions for debt recovery, corporate restructuring, and insolvency proceedings.' },
-    { icon: <Briefcase size={32} />, title: 'Litigation & Arbitration', desc: 'Vigorous representation in dispute resolution, court litigation, and arbitration.' },
-    { icon: <ShieldCheck size={32} />, title: 'Company Secretariat', desc: 'Professional secretarial services to ensure administrative efficiency and statutory compliance.' },
+    { 
+      icon: <Briefcase size={32} />, 
+      title: 'Corporate & Commercial', 
+      desc: 'Comprehensive legal support across all aspects of business operations, including company formation and governance, legal due diligence, contract drafting and negotiation, regulatory compliance, and a wide range of commercial transactions.' 
+    },
+    { 
+      icon: <Landmark size={32} />, 
+      title: 'Banking and Finance', 
+      desc: 'Specialized legal advice across a broad spectrum of banking and finance matters, including regulatory compliance, borrowing, financing structures, lending transactions, and capital markets activities.' 
+    },
+    { 
+      icon: <MapPin size={32} />, 
+      title: 'Real Estate', 
+      desc: 'Provision of legal advice on residential and commercial real estate matters, including property acquisition and disposition, leasing, due diligence, and transactional structuring.' 
+    },
+    { 
+      icon: <Users size={32} />, 
+      title: 'Employment', 
+      desc: 'Strategic and practical legal advice on all aspects of employment law, including labor relations, workplace policies, employment contracts, termination matters, and regulatory compliance.' 
+    },
+    { 
+      icon: <ShieldCheck size={32} />, 
+      title: 'Insolvency', 
+      desc: 'Practical solutions for insolvency matters with strategic insight and efficient execution.' 
+    },
+    { 
+      icon: <Gavel size={32} />, 
+      title: 'Litigation & Arbitration', 
+      desc: 'Strategic and results driven representation in all forms of dispute resolution, including court litigation, arbitration, and alternative dispute resolution mechanisms. Our team is committed to protecting our clients’ interests at every stage of the dispute process, from pre litigation strategy and negotiation through to final resolution and enforcement.' 
+    },
   ];
 
   const team = [
@@ -41,15 +62,23 @@ const App: React.FC = () => {
       name: 'Tsolmonchimeg Enkhbat', 
       role: 'Managing Partner', 
       img: person1Img,
-      bio: 'Tsolmonchimeg is a partner specializing in Commercial and Corporate law, with extensive expertise in corporate, real estate, employment law, and investment/banking/finance. She has represented Fortune 500 companies in litigation and arbitration and previously served as a partner at a leading Mongolian law firm and senior bank lawyer.',
-      qualifications: ['LL.B, Otgontenger University, 2001', 'BA, University of the Humanities, 2011', 'LL.M, National University of Mongolia, 2004', 'LL.M (Commercial Law), Monash University, 2017']
+      bio: 'Tsolmonchimeg is a lawyer specializing in commercial and corporate law, with extensive experience in investment, real estate, employment, banking and finance, and capital markets. She advises both domestic and foreign clients, guiding them from the establishment of their businesses through all phases of their operations.',
+      qualifications: [
+        'LL.B, Otgontenger University, 2001', 
+        'BA, University of the Humanities, 2011', 
+        'LL.M, National University of Mongolia, 2004', 
+        'LL.M (Commercial Law), Monash University, 2017'
+      ]
     },
     { 
       name: 'Solongo Buyant', 
       role: 'Partner', 
       img: person2Img,
-      bio: 'Solongo specializes in civil, administrative, and criminal law, with a strong focus on litigation and arbitration. Her career includes serving as a senior lawyer at the Civil Aviation Authority of Mongolia and as a legal researcher. She has contributed to numerous legislative drafts and professional publications.',
-      qualifications: ['LL.B, Ikh Zasag University, 2002', 'LL.M, National University of Mongolia, 2004', 'PhD Candidate, National University of Mongolia']
+      bio: 'Solongo is an experienced litigation lawyer specializing in civil, administrative, and criminal law, with a strong track record in representing clients across all stages of litigation and arbitration. She brings extensive expertise in handling complex disputes, providing strategic advice, and advocating effectively before courts and arbitral tribunals, with a strong commitment to the protection of human rights.',
+      qualifications: [
+        'LL.B, Ikh Zasag University, 2002', 
+        'LL.M, National University of Mongolia, 2004'
+      ]
     },
   ];
 
@@ -87,8 +116,8 @@ const App: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1>Defining Excellence in Legal Advocacy</h1>
-            <p>S&TS Partners LLC provides strategic, results-driven legal solutions with integrity and unwavering commitment to our clients in Mongolia and beyond.</p>
+            <h1>DEFINING EXCELLENCE IN LEGAL ADVISORY AND ADVOCACY SERVICES</h1>
+            <p>S&TS Partners LLC provides strategic, results driven legal solutions with integrity and an unwavering commitment to our Mongolian and foreign clients.</p>
             <button className="cta-button">Request Consultation</button>
           </motion.div>
         </div>
@@ -122,17 +151,16 @@ const App: React.FC = () => {
           >
             <h2 style={{ marginBottom: '2rem' }}>About S&TS Partners LLC</h2>
             <p style={{ fontSize: '1.1rem', color: 'var(--text-main)', lineHeight: '1.8' }}>
-              S&TS Partners LLC is a full-service law firm with a strong focus on general corporate law and litigation. 
-              The firm was founded in 2019 by two Mongolian-qualified lawyers educated in prestigious institutions in 
-              Mongolia and Australia with 15 years of separate experience in both consulting and advocacy.
+              S&TS Partners LLC is a full service law firm with a strong focus on corporate law and litigation. 
+              Established in 2019, the firm was founded by two Mongolian qualified lawyers educated at prestigious 
+              institutions in Mongolia and Australia.
             </p>
             <p style={{ fontSize: '1.1rem', color: 'var(--text-main)', lineHeight: '1.8', marginTop: '1.5rem' }}>
-              Our partners have also worked in the leading law firms, banks and government-related organizations before 
-              establishing the firm. To this extend, S&TS is a professional law firm that combines local knowledge and 
-              international perspectives. Our practical knowledge and rich experience allow us to provide comprehensive 
-              range of legal services to our domestic and foreign clients. Our objective is to provide high quality legal 
-              and commercial advice through an efficiently managed professional practice that will facilitate our 
-              clients’ business dealings in Mongolia.
+              Our partners each bring 20 years of experience in corporate law and litigation, with particular expertise 
+              in advising foreign investors, as well as in both consulting and advocacy. Drawing on this extensive 
+              experience, we provide a comprehensive range of legal services to both domestic and international clients. 
+              Our objective is to deliver high quality legal and commercial advice through an efficiently managed 
+              professional practice, supporting and facilitating our clients’ business activities in Mongolia.
             </p>
           </motion.div>
 
@@ -151,7 +179,7 @@ const App: React.FC = () => {
                 <p style={{ fontWeight: 'bold', marginBottom: '1.5rem' }}>{member.role}</p>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-main)', marginBottom: '1.5rem' }}>{member.bio}</p>
                 <div style={{ borderTop: '1px solid var(--accent)', paddingTop: '1rem' }}>
-                  <h4 style={{ fontSize: '0.8rem', color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>Qualifications</h4>
+                  <h4 style={{ fontSize: '0.8rem', color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>Education</h4>
                   <ul style={{ listStyle: 'none', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
                     {member.qualifications.map((q, i) => <li key={i} style={{ marginBottom: '0.3rem' }}>• {q}</li>)}
                   </ul>
@@ -183,15 +211,16 @@ const App: React.FC = () => {
               <button type="submit" className="cta-button" style={{ width: '100%' }}>Send Message</button>
             </motion.form>
 
-            <div style={{ marginTop: '4rem', display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Phone size={20} color="var(--secondary)" /> (555) 123-4567
+            <div style={{ marginTop: '4rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <Phone size={20} color="var(--secondary)" /> +976 99030515; +976 99163617
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Mail size={20} color="var(--secondary)" /> contact@stspartners.com
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <Mail size={20} color="var(--secondary)" /> info@stspartners.mn
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <MapPin size={20} color="var(--secondary)" /> 123 Legal Way, Suite 100
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', textAlign: 'center', maxWidth: '500px' }}>
+                <MapPin size={20} color="var(--secondary)" style={{ flexShrink: 0, marginTop: '4px' }} />
+                Suite 301, Arig Center, Jamyangun Street, 1st khoroo, Sukhbaatar District, Ulaanbaatar 14240, Mongolia
               </div>
             </div>
           </div>
