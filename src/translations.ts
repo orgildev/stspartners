@@ -9,7 +9,7 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      title: 'Defining Excellence In Legal Advisory And Advocacy Services',
+      title: 'Defining Excellence in Legal Advisory and Advocacy Services',
       desc: 'S&TS Partners LLC provides strategic, results driven legal solutions with integrity and an unwavering commitment to our Mongolian and foreign clients.',
       cta: 'Request Consultation',
     },
@@ -72,7 +72,7 @@ export const translations = {
       },
     ],
     contact: {
-      title: 'Get In Touch',
+      title: 'Get in Touch',
       namePlaceholder: 'Full Name',
       phonePlaceholder: 'Phone Number',
       messagePlaceholder: 'How can we help you?',
@@ -113,7 +113,7 @@ export const translations = {
         },
         { 
           title: 'Хөдөлмөр', 
-          desc: 'Хөдөлмөрийн харилцаа, ажлын байрны журам, хөдөлмөрийн гэрээ, цуцлах асуудал болон зохицуулалтын нийцэл зэрэг хөдөлмөрийн эрх зүйн бүх чиглэлээр стратегийн болон практик зөвлөгөө өгдөг.' 
+          desc: 'Хөдөлмөрийн харилцаа, ажлын байрны журам, хөдөлмөрийн гэрээ, цуцлах асуудал болон зохицуулалтын нийцэл зэрэг хөдөлмөрийн эрх зүйн бүх чиэлэлээр стратегийн болон практик зөвлөгөө өгдөг.' 
         },
         { 
           title: 'Төлбөрийн чадваргүйдэл', 

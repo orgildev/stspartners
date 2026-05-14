@@ -58,14 +58,6 @@ const App: React.FC = () => {
               <li><a href="#about">{t.nav.about}</a></li>
               <li><a href="#contact">{t.nav.contact}</a></li>
             </ul>
-            <button 
-              onClick={toggleLang} 
-              className="lang-switcher"
-              aria-label="Switch Language"
-            >
-              <Globe size={20} />
-              <span>{lang === 'en' ? 'MN' : 'EN'}</span>
-            </button>
           </div>
         </div>
       </nav>
@@ -172,7 +164,7 @@ const App: React.FC = () => {
                 const subject = `${t.contact.subject}: ${name}`;
                 const body = `Full Name: ${name}\nPhone: ${phone}\n\nMessage:\n${message}`;
                 
-                window.location.href = `mailto:orgil0515@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = `mailto:info@stspartners.mn?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
               }}
             >
               <div className="form-group">
