@@ -44,12 +44,12 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
+    <div data-lang={lang}>
       <nav className="navbar">
         <div className="container nav-content">
           <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <img src={logoImg} alt="S&TS Partners LLC Logo" style={{ height: '80px', width: 'auto' }} />
-            <span className="logo-text">S&TS Partners LLC</span>
+            <span className="logo-text">{t.firmName}</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
             <ul className="nav-links">
@@ -58,6 +58,13 @@ const App: React.FC = () => {
               <li><a href="#about">{t.nav.about}</a></li>
               <li><a href="#contact">{t.nav.contact}</a></li>
             </ul>
+            <button 
+              onClick={toggleLang}
+              className="lang-switcher"
+            >
+              <Globe size={18} />
+              {lang === 'en' ? 'MN' : 'EN'}
+            </button>
           </div>
         </div>
       </nav>
