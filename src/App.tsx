@@ -38,6 +38,7 @@ const App: React.FC = () => {
   ];
 
   const teamImages = [person1Img, person2Img];
+  const teamEmails: (string | undefined)[] = ['tsolmonchimeg@stspartners.mn', undefined];
 
   const toggleLang = () => {
     setLang(prev => prev === 'en' ? 'mn' : 'en');
@@ -140,7 +141,15 @@ const App: React.FC = () => {
               >
                 <img src={teamImages[idx]} alt={member.name} className="team-image" style={{ filter: 'none' }} />
                 <h3 style={{ color: 'var(--secondary)', marginBottom: '0.5rem' }}>{member.name}</h3>
-                <p style={{ fontWeight: 'bold', marginBottom: '1.5rem' }}>{member.role}</p>
+                <p style={{ fontWeight: 'bold', marginBottom: teamEmails[idx] ? '0.5rem' : '1.5rem' }}>{member.role}</p>
+                {teamEmails[idx] && (
+                  <a
+                    href={`mailto:${teamEmails[idx]}`}
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--secondary)', marginBottom: '1.5rem', textDecoration: 'none' }}
+                  >
+                    <Mail size={16} /> {teamEmails[idx]}
+                  </a>
+                )}
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-main)', marginBottom: '1.5rem' }}>{member.bio}</p>
                 <div style={{ borderTop: '1px solid var(--accent)', paddingTop: '1rem' }}>
                   <h4 style={{ fontSize: '0.8rem', color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>{t.about.education}</h4>
