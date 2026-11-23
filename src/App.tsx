@@ -13,8 +13,8 @@ import {
 } from 'lucide-react';
 
 import logoImg from './assets/transparent-logo.png';
-import person1Img from './assets/Person1.jpg';
-import person2Img from './assets/Person2.jpg';
+import person1Img from './assets/Person1.webp';
+import person2Img from './assets/Person2.webp';
 import { translations, type Language } from './translations';
 
 const App: React.FC = () => {
@@ -139,7 +139,16 @@ const App: React.FC = () => {
                 transition={{ delay: idx * 0.2 }}
                 style={{ textAlign: 'left', background: 'var(--bg-card)', padding: '2rem', borderRadius: '8px' }}
               >
-                <img src={teamImages[idx]} alt={member.name} className="team-image" style={{ filter: 'none' }} />
+                <img
+                  src={teamImages[idx]}
+                  alt={member.name}
+                  className="team-image"
+                  width={600}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ filter: 'none' }}
+                />
                 <h3 style={{ color: 'var(--secondary)', marginBottom: '0.5rem' }}>{member.name}</h3>
                 <p style={{ fontWeight: 'bold', marginBottom: teamEmails[idx] ? '0.5rem' : '1.5rem' }}>{member.role}</p>
                 {teamEmails[idx] && (

@@ -223,6 +223,7 @@ h1, h2, h3, h4 {
 
 .team-image {
   width: 100%;
+  height: auto;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 8px;
